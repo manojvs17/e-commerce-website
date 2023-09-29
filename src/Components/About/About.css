@@ -1,0 +1,16 @@
+.about-btn {
+    font-size:2em;
+      font-family: monospace;
+      background-color: lime;
+      border: none;
+      border-radius: 15px;
+      padding:10px 20px 10px 20px;
+      transition: .3s;
+    }
+    
+    .about-btn:hover {
+      background-color: #3b82f6;
+      box-shadow: 0 0 0 8px #3b83f65f;
+      color: #fff;
+    }
+    

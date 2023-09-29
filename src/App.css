@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque&family=Poppins:wght@300;400&display=swap');
+
+.font-poppins{
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-bg{
+    background: linear-gradient(rgb(196, 196, 238),rgb(194, 233, 190));
+}
+.nav-text{
+    text-shadow: 2px 2px 3px yellow
+}
