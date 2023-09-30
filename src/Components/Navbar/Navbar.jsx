@@ -6,7 +6,6 @@ const Navbar = ({isChecked,setIsChecked}) => {
 
  const handleToggle = () => {
   setIsChecked(!isChecked);
-      (isChecked) ? console.log("Tamil") : console.log("English");
   };
 
   return (
@@ -15,9 +14,15 @@ const Navbar = ({isChecked,setIsChecked}) => {
         <figure>
           <img src={logo} alt='Logo' className='nav-logo h-[6em] w-[6em] mt-4'></img>
         </figure>
+        {(isChecked) ? 
+        <h1 className='nav-text text-[1.8em] uppercase tracking-[1.7px]  text-center font-bold text-[#23047a] md:text-[2.1em]'>
+              Kumaran Men Self-Help Group 
+        </h1> :
         <h1 className='nav-text text-[1.8em] text-center font-bold text-[#23047a] md:text-[2.1em]'>
-              {(isChecked) ? "Kumaran Men Self-Help Group" : "குமரன் ஆடவர் சுய உதவிக் குழு" }
+              குமரன் ஆடவர் சுய உதவிக் குழு 
         </h1>
+               
+        }
       </div>
       <div className='toggle-language absolute right-0 top-10 min-[620px]:top-[0.3em] md:right-[45%] md:top-[5.5em]'>
         <label className="switch">
