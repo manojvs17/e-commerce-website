@@ -65,7 +65,7 @@ const ItemsList = ({onButtonClick,isChecked}) => {
             choosedItem.length > 0 ? (
               <CartList choosedItem={choosedItem} isChecked={isChecked}/>
             ) : (
-              <div className="text-[red] text-[2em] font-bold font-poppins my-[2em]">நீங்கள் எதையும் தேர்வு செய்யவில்லை</div>
+              <div className="text-[red] text-[2em] font-bold font-poppins my-[2em] text-center">நீங்கள் எதையும் தேர்வு செய்யவில்லை</div>
             )
           ) 
           : null

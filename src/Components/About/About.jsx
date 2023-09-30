@@ -6,8 +6,8 @@ const About = ({onButtonClick,isChecked}) => {
     <div className='h-screen p-[1em] flex flex-col gap-5 bg-[#eaf4f4] items-center justify-center md:gap-4 md:pt-[5em] md:h-[80vh]'>
       {(isChecked) ? (
       <>
-            <h3 className='text-[1.4em] px-3 text-center font-bold md:text-[2.3em] bg-[skyblue] rounded-[30px]'>Looking for event essentials to rent? We've got you covered!</h3>
-            <h3 className='text-[1.2em] text-center font-bold md:text-[1.6em] '> Get Your Event Gears Here: Tables, Chairs, and other Utensils - All Available for Rent!</h3>
+            <h3 className='text-[1.4em] px-3 text-center font-bold md:text-[2.6em] bg-[skyblue] rounded-[30px]'>Looking for event essentials to rent? We've got you covered!</h3>
+            <h3 className='text-[1.2em] text-center font-bold md:text-[1.8em] '> Get Your Event Gears Here: Tables, Chairs, and other Utensils - All Available for Rent!</h3>
             <h2 className='text-[1.2em] text-center font-bold md:text-[2em] '>
               <span className='text-red-700 text-[1.1em]'>Place:</span> Velampalayam,Kavindapadi
             </h2>
