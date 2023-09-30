@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './CartList.css';
 
-const CartList = ({choosedItem}) => {
+const CartList = ({choosedItem,isChecked}) => {
     const [totalPrice,setTotalPrice]=useState(0);
     const [quantities, setQuantities] = useState(
         choosedItem.reduce((acc, item) => ({ ...acc, [item.id]: 1 }), {})
@@ -41,11 +41,11 @@ const CartList = ({choosedItem}) => {
                     </div>
                     <div className='flex md:gap-20 gap-10 '>
                     <div className='flex flex-col items-center justify-center font-bold text-[1.2em] gap-2'>
-                        <h2 className='text-[blue]'>Price</h2>
+                        <h2 className='text-[blue]'>{(isChecked) ? "Price" : "விலை"}</h2>
                         <h3> &#8377; {choosed.price}</h3>
                     </div>
                     <div className='flex flex-col items-center justify-center font-bold text-[1.2em] gap-2'>
-                        <h2 className='text-[blue]'>Quantity</h2>
+                        <h2 className='text-[blue]'>{(isChecked) ? "Quantity" : "அளவு"}</h2>
                         <div className='btn-group'>
                             <button onClick={() => decrement(choosed.id)} className=' p-2 border-2 border-black'>-</button>
                                 <input 
@@ -60,14 +60,14 @@ const CartList = ({choosedItem}) => {
                     </div>
                     </div>
                     <div className='item-price-remove font-bold text-[1.2em]'>
-                        <h2 className='text-[blue]'>Sub-Total</h2>
+                        <h2 className='text-[blue]'>{(isChecked) ? "Sub-Total" : "கூட்டுத்தொகை"}</h2>
                         <span>&#8377; {(quantities[choosed.id] || 1) * choosed.price}</span>
                     </div>
             </div>
         ))}
         <div className='total-price'>
             <hr className='h-[4px] border-0 bg-black'></hr>
-            <span>Total Price Of your Cart :</span>
+            <span>{(isChecked) ? "Total Price Of your Cart :" : "மொத்த விலை :"}</span>
             <span className='text-[green] text-[1.5em]'> &#8377; {totalPrice}</span>
         </div>
     </div>

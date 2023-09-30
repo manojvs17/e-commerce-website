@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ItemList.css';
 
-const Card = ({item,addToCart,removeFromCart}) => {
+const Card = ({item,addToCart,removeFromCart,isChecked}) => {
   const {imageSource,title,price}= item;
   const [addRemoveButton,setAddButton]=useState(false);
 
@@ -19,15 +19,15 @@ const Card = ({item,addToCart,removeFromCart}) => {
             <h1 className='text-center text-[1.5em] font-bold'>
               {title}
             </h1>
-            <h3 className='text-[#03045e] font-bold text-[1.2em]'>
-            <span className='text-[1.5em]'>&#8377; {price}</span>/day
+            <h3 className='text-[#03045e] font-bold text-[1.1em]'>
+            <span className='text-[1.5em]'>&#8377; {price}</span>/ {(isChecked) ? "day" : "நாள்"}
             </h3>
             {(!addRemoveButton) ?
             <button onClick={()=>{addToCart(item);toggleAddCartButton()}} className='add-to-cart-btn'>
-              Add To Cart
+              {(isChecked) ? "Add To Cart" : "சேர்க்க"}
             </button> :
-            <button onClick={()=>{removeFromCart(item.id);toggleAddCartButton()}} className='add-to-cart-btn'>
-              Remove
+            <button onClick={()=>{removeFromCart(item.id);toggleAddCartButton()}} className='add-to-cart-btn bg-red-800'>
+              {(isChecked) ? "Remove" : "நீக்கு"}
             </button>
             }
       </div>
